@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   allow_unauthenticated_access only: %i[ new create ]
 
   def new
-    # @user = User.new
+    @user = User.new
     # @organization = Organization.new
   end
 
