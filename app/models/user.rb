@@ -4,5 +4,6 @@ class User < ApplicationRecord
   has_many :memberships, dependent: :destroy
   has_many :organizations, through: :memberships
 
+
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 end
